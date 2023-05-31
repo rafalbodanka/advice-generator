@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import AdviceWindow from "./components/AdviceWindow";
 
 function App() {
+  const [advice, setAdvice] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-darkBlue w-screen h-screen font-manrope flex justify-center items-center">
+      <AdviceWindow advice={advice} setAdvice={setAdvice}></AdviceWindow>
     </div>
   );
 }
